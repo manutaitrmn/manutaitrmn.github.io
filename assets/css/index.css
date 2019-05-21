@@ -52,8 +52,8 @@ header > div {
 }
 header .h-left h1 {
   padding: 0;
-  font-size: 1.4em;
-  letter-spacing: 1px;
+  font-size: 2em;
+  letter-spacing: 2px;
   font-family: "Circular";
 }
 header .h-right nav {
@@ -68,6 +68,20 @@ header .h-right nav ul {
 }
 header .h-right nav ul li {
   list-style-type: none;
+  letter-spacing: 2px;
+}
+header .h-right nav ul li a {
+  padding: 10px 0;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+  transition: all 0.2s ease-in-out;
+}
+header .h-right nav ul li a:hover {
+  border-bottom-color: white;
+}
+header .h-right nav ul li:not(:last-child) {
+  margin-right: 50px;
 }
 
 /*# sourceMappingURL=index.css.map */
