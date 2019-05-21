@@ -69,6 +69,7 @@ header .h-right nav ul {
 header .h-right nav ul li {
   list-style-type: none;
   letter-spacing: 2px;
+  font-size: 1em;
 }
 header .h-right nav ul li a {
   padding: 10px 0;
