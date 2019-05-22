@@ -56,14 +56,16 @@
       <script type="text/javascript">
          $(window).on("load", function() {
             loader.play();
+            presentation.play();
          });
 
-         var animation1 = anime({
+         var presentation = anime({
            targets: '.presentation',
            translateY: -20,
            opacity: 1,
            delay: 800,
-           autoplay: true,
+           duration: 500,
+           autoplay: false,
            easing: 'easeInOutQuad'
          });
 
