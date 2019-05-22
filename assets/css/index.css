@@ -90,20 +90,20 @@ header .h-right nav ul li:not(:last-child) {
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 0 8vw;
+  padding: 0 12vw;
 }
 #content .presentation h2 {
   font-size: 3em;
   letter-spacing: 4px;
-  text-transform: uppercase;
   line-height: 40px;
+  text-transform: uppercase;
 }
 #content .presentation h2 span {
   font-size: 0.38em;
   color: #7b7b7b;
 }
 #content .presentation hr {
-  width: 30%;
+  width: 40%;
   border: none;
   background-color: #cbafeb;
   height: 5px;
@@ -122,6 +122,25 @@ header .h-right nav ul li:not(:last-child) {
 }
 #content .presentation a:hover {
   background-color: #cbafeb;
+}
+
+footer {
+  padding: 1vh 0vw;
+  height: 8vh;
+}
+footer ul {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer ul li {
+  list-style-type: none;
+  letter-spacing: 1px;
+  font-size: 0.8em;
+}
+footer ul li:not(:last-child) {
+  margin-right: 50px;
 }
 
 /*# sourceMappingURL=index.css.map */
