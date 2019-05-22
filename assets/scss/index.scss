@@ -56,10 +56,10 @@ header {
    }
    .h-left {
       h1 {
-         font-size: 1em;
+         font-size: 0.8em;
          letter-spacing: 2px;
          font-family: "Circular";
-         text-transform: lowercase;
+         text-transform: uppercase;
       }
    }
 
@@ -150,6 +150,16 @@ footer {
          font-size: 0.8em;
          &:not(:last-child) {
             margin-right: 50px;
+         }
+         a {
+            padding: 10px 0;
+            border-top-width: 2px;
+            border-top-style: solid;
+            border-top-color: transparent;
+            transition: all 0.2s ease-in-out;
+            &:hover {
+               border-top-color: white;
+            }
          }
       }
    }

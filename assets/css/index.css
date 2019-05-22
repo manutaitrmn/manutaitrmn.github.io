@@ -51,10 +51,10 @@ header > div {
   align-items: center;
 }
 header .h-left h1 {
-  font-size: 1em;
+  font-size: 0.8em;
   letter-spacing: 2px;
   font-family: "Circular";
-  text-transform: lowercase;
+  text-transform: uppercase;
 }
 header .h-right nav {
   display: flex;
@@ -141,6 +141,16 @@ footer ul li {
 }
 footer ul li:not(:last-child) {
   margin-right: 50px;
+}
+footer ul li a {
+  padding: 10px 0;
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: transparent;
+  transition: all 0.2s ease-in-out;
+}
+footer ul li a:hover {
+  border-top-color: white;
 }
 
 /*# sourceMappingURL=index.css.map */
