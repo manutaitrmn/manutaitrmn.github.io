@@ -1,3 +1,5 @@
+@import "variables";
+
 @font-face {
   font-family: "Circular";
   src: url("../fonts/circular/CircularStd-Book.woff");
@@ -13,6 +15,7 @@
    margin: 0;
    box-sizing: border-box;
    color: white;
+   // border: 1px solid red;
 }
 
 a {
@@ -26,7 +29,7 @@ html, body {
 }
 
 body {
-   font-size: 100%;
+   font-size: 1em;
    font-family: "Circular";
 }
 
@@ -35,7 +38,7 @@ body {
    z-index: 2;
    width: 100%;
    height: 100%;
-   padding: 0 4vw;
+   padding: 0 2vw;
 }
 
 header {
@@ -53,10 +56,10 @@ header {
    }
    .h-left {
       h1 {
-         padding: 0;
-         font-size: 2em;
+         font-size: 1em;
          letter-spacing: 2px;
          font-family: "Circular";
+         text-transform: lowercase;
       }
    }
 
@@ -71,8 +74,8 @@ header {
             align-items: center;
             li {
                list-style-type: none;
-               letter-spacing: 2px;
-               font-size: 1em;
+               letter-spacing: 1px;
+               font-size: 0.8em;
                a {
                   padding: 10px 0;
                   border-bottom-width: 2px;
@@ -87,6 +90,47 @@ header {
                   margin-right: 50px;
                }
             }
+         }
+      }
+   }
+}
+
+#content {
+   height: 84vh;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   padding: 0 8vw;
+   .presentation {
+      h2 {
+         font-size: 3em;
+         letter-spacing: 4px;
+         text-transform: uppercase;
+         line-height: 40px;
+         span {
+            font-size: 0.38em;
+            color: #7b7b7b;
+         }
+      }
+      hr {
+         width: 30%;
+         border: none;
+         background-color: $theme-second-color;
+         height: 5px;
+      }
+      p {
+         font-size: 0.95em;
+         letter-spacing: 1px;
+      }
+      a {
+         padding: 10px;
+         font-size: 0.8em;
+         color: white;
+         border: 2px solid $theme-second-color;
+         background-color: transparent;
+         transition: all 0.2 ease-in-out;
+         &:hover {
+            background-color: $theme-second-color;
          }
       }
    }

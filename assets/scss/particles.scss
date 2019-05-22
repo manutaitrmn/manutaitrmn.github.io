@@ -1,3 +1,5 @@
+@import "variables";
+
 /* ---- reset ---- */
 canvas {
 display: block;
@@ -9,7 +11,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background-color: #171717;
+background-color: $bg-color;
 z-index: 0;
 } /* ---- stats.js ---- */
 .count-particles {
