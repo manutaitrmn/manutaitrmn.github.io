@@ -98,6 +98,8 @@ header .h-right nav ul li:not(:last-child) {
   width: 100%;
   display: flex;
   align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
   padding: 0 12vw;
 }
 #content .presentation h2 {
@@ -130,6 +132,21 @@ header .h-right nav ul li:not(:last-child) {
 }
 #content .presentation a:hover {
   background-color: #cbafeb;
+}
+#content .vector {
+  position: relative;
+  z-index: 20;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+#content .vector img {
+  position: relative;
+  right: 0;
+  height: 80%;
 }
 
 footer {
