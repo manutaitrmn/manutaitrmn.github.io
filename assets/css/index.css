@@ -28,6 +28,14 @@ body {
   font-family: "Circular";
 }
 
+.loader {
+  z-index: 100;
+  position: absolute;
+  background-color: #313131;
+  height: 100%;
+  width: 100%;
+}
+
 #wrapper {
   position: relative;
   z-index: 2;

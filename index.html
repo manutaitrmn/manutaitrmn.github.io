@@ -12,6 +12,7 @@
       <script src="assets/js/anime.js"></script>
    </head>
    <body>
+      <div class="loader"></div>
       <div id="particles-js"></div>
       <div id="wrapper">
          <header>
@@ -53,16 +54,29 @@
       <script src="assets/js/stats.min.js"></script>
       <script src="assets/js/myparticles.js"></script>
       <script type="text/javascript">
+         $(window).on("load", function() {
+            loader.play();
+         });
 
-         var animation = anime({
+         var animation1 = anime({
            targets: '.presentation',
            translateY: -20,
            opacity: 1,
+           delay: 800,
            autoplay: true,
            easing: 'easeInOutQuad'
          });
 
-         $("h1").hover(function() {
+         var loader = anime({
+           targets: '.loader',
+           width: 0,
+           delay: 500,
+           duration: 500,
+           autoplay: true,
+           easing: 'easeInOutQuad'
+         });
+
+         $(".presentation").hover(function() {
             animation.play();
          });
       </script>
