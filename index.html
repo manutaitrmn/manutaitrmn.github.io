@@ -13,11 +13,10 @@
    </head>
    <body>
       <div class="loader"></div>
-      <div id="particles-js"></div>
       <div id="wrapper">
          <header>
             <div class="h-left">
-               <a href="/"><h1 class="tk-futura-pt">Manutai</h1></a>
+               <a href="/"><h1>mt</h1></a>
             </div>
             <div class="h-right">
                <nav>
@@ -30,17 +29,16 @@
             </div>
          </header>
          <section id="content">
-            <div class="presentation">
-               <h2><span>Teraiamano</span><br/>Manutai</h2>
-               <br/>
-               <hr>
-               <br/>
-               <p>Junior full-stack developer</p>
-               <br/>
-               <!-- <a href="">About</a> -->
-            </div>
             <div class="vector">
-               <img src="assets/img/me.svg" alt="">
+               <img src="assets/img/me.png" alt="">
+            </div>
+            <div class="presentation">
+               <div class="">
+                  <h2><span>Teraiamano</span><br/>Manutai</h2>
+                  <hr>
+                  <p>Junior full-stack developer</p>
+               </div>
+               <!-- <a href="">About</a> -->
             </div>
          </section>
          <footer>
@@ -52,25 +50,23 @@
             </ul>
          </footer>
       </div>
-      <!-- <div class="count-particles"> <span class="js-count-particles">--</span> particles </div> -->
-      <script src="assets/js/particles.min.js"></script>
+      <!-- <script src="assets/js/particles.min.js"></script>
       <script src="assets/js/stats.min.js"></script>
-      <script src="assets/js/myparticles.js"></script>
+      <script src="assets/js/myparticles.js"></script> -->
       <script type="text/javascript">
          $(window).on("load", function() {
             loader.play();
-            presentation.play();
+            // presentation.play();
          });
 
-         var presentation = anime({
-           targets: ['.presentation', '.vector img'],
-           translateY: -20,
-           opacity: 1,
-           delay: anime.stagger(300, {start: 600}),
-           duration: 500,
-           autoplay: false,
-           easing: 'easeInOutQuad'
-         });
+         // var presentation = anime({
+         //   targets: ['.presentation', '.vector img'],
+         //   opacity: 1,
+         //   delay: anime.stagger(300, {start: 600}),
+         //   duration: 500,
+         //   autoplay: false,
+         //   easing: 'easeInOutQuad'
+         // });
 
          var loader = anime({
            targets: '.loader',
@@ -81,9 +77,9 @@
            easing: 'easeInOutQuad'
          });
 
-         $(".presentation").hover(function() {
-            animation.play();
-         });
+         // $(".presentation").hover(function() {
+         //    animation.play();
+         // });
       </script>
    </body>
 </html>

@@ -18,13 +18,17 @@
    padding: 0;
    margin: 0;
    box-sizing: border-box;
-   color: white;
+   color: $bg-color;
    // border: 1px solid red;
 }
 
 a {
    color: inherit;
    text-decoration: none;
+   &:hover {
+      text-decoration: none;
+      color: inherit;
+   }
 }
 
 html, body {
@@ -47,55 +51,63 @@ body {
 
 #wrapper {
    position: relative;
-   z-index: 2;
+
    width: 100%;
    height: 100%;
-   padding: 0 2vw;
 }
 
 header {
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   left: 0;
    width: 100%;
-   height: $header-height;
    display: flex;
    flex-direction: row;
    justify-content: space-between;
-   padding: 1vh 0vw;
+   align-items: flex-start;
+   padding: 2em;
    > div {
       display: flex;
       height: 100%;
       flex-direction: row;
-      align-items: center;
+   }
+   .h-left, .h-right {
    }
    .h-left {
       h1 {
-         font-size: 0.8em;
-         letter-spacing: 2px;
+         font-size: 1.2em;
+         padding: 2px 4px;
+         letter-spacing: 1px;
          font-family: "Circular";
-         text-transform: uppercase;
+         color: white;
+         background-color: $bg-color;
       }
    }
 
    .h-right {
       nav {
          display: flex;
-         height: 100%;
+         height: 3em;
          ul {
             height: 100%;
             display: flex;
             flex-direction: row;
-            align-items: center;
+            align-items: flex-start;
             li {
+               color: #323232;
                list-style-type: none;
                letter-spacing: 1px;
-               font-size: 0.8em;
+               padding: 4px 0 10px 0px;
+               font-size: 1em;
                a {
-                  padding: 10px 0;
+                  padding: 6px 0 10px 0px;
                   border-bottom-width: 2px;
                   border-bottom-style: solid;
                   border-bottom-color: transparent;
                   transition: all 0.2s ease-in-out;
                   &:hover {
-                     border-bottom-color: white;
+                     border-bottom-color: #323232;
                   }
                }
                &:not(:last-child) {
@@ -108,14 +120,20 @@ header {
 }
 
 #content {
-   height: $content-height;
+   position: relative;
+   z-index: 0;
    width: 100%;
+   height: 92%;
    display: flex;
-   align-items: center;
    flex-direction: row;
    justify-content: space-between;
-   padding: 0 12vw;
    .presentation {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100%;
+      width: 50%;
+      opacity: 1;
       h2 {
          font-size: 3em;
          letter-spacing: 4px;
@@ -149,38 +167,44 @@ header {
       }
    }
    .vector {
-      position: relative;
-      z-index: 20;
-      width: 50%;
       height: 100%;
+      width: 50%;
       overflow: hidden;
       display: flex;
-      justify-content: flex-end;
       align-items: flex-end;
+      justify-content: center;
       img {
-         position: relative;
          right: 0;
-         height: 80%;
+         height: 60%;
+         transition: all 0.2s ease-in-out;
+         &:hover {
+            transform: scale(1.1);
+         }
       }
    }
 }
 
 footer {
-   padding: 1vh 0vw;
-   height: $footer-height;
+   border-top: 5px solid $theme-second-color;
+   padding: 2em;
+   margin: 0;
+   height: 8%;
+   background-color: $bg-color;
    ul {
       height: 100%;
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: flex-end;
       li {
          list-style-type: none;
          letter-spacing: 1px;
-         font-size: 0.8em;
+         font-size: 1em;
+         color: white;
          &:not(:last-child) {
             margin-right: 50px;
          }
          a {
+            color: white;
             padding: 10px 0;
             border-top-width: 2px;
             border-top-style: solid;
